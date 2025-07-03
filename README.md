@@ -8,7 +8,8 @@
 添加。一般地，新添加网站短信资源需要编写扩展脚本，需要具有Groovy知识。
 ## 快速开始
 1. 配置JDK
-2. 下载源码安装
+2. 安装方式
+     1. 下载源码安装
      ```
      git clone https://github.com/leijinjun/sms-bomb.git
      cd sms-bomb
@@ -19,7 +20,7 @@
      Windows平台下执行
      java -jar "-Dspring.profiles.active=dev" "-DDB_FILE_PATH=sqlite3DB文件路径" "-Docr.dddd.url=ddddocr服务图片识别地址" "-Docr.dddd.base64.url=ddddocr服务base64图片识别地址" sms-bomb.jar
      ```
-3. 下载安装包安装
+     2. 下载安装包安装
 
     [Release](https://github.com/leijinjun/sms-bomb/releases) 页面下载最新jar包。
     执行命令
@@ -30,7 +31,8 @@
      java -jar "-Dspring.profiles.active=dev" "-DDB_FILE_PATH=sqlite3DB文件路径" "-Docr.dddd.url=ddddocr服务图片识别地址" "-Docr.dddd.base64.url=ddddocr服务base64图片识别地址" sms-bomb.jar
     ```
    其中sqlite3DB文件在[sqllite3DB样例文件](https://github.com/leijinjun/sms-bomb/blob/develop/src/main/resources/db/sms_bomb.db) ，该文件为样例文件，仅用于测试。
-4. docker安装
+
+     3.  docker安装
     在路径/opt/smsBomb下添加db文件。
     ```
     git clone https://github.com/leijinjun/sms-bomb.git
@@ -45,6 +47,6 @@
     -e SQLITE3DB="sqlite3DB文件名" \
     -d sms-bomb:[deploy.sh脚本中指定的version]
     ```
-5. 安装ocr服务
+6. 安装ocr服务
 
    [ddddocr](https://github.com/sml2h3/ocr_api_server)，使用此服务将极大提高发送成功概率。
